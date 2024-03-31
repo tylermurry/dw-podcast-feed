@@ -1,5 +1,7 @@
 namespace DWPodcastFeed.Models;
 
+public record PodcastListResponse(List<PodcastEpisode> ListPodcastEpisode);
+
 public record Podcast(
     string Slug,
     string Name,

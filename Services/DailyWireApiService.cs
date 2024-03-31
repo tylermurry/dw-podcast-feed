@@ -1,6 +1,5 @@
 using System.Net.Http.Headers;
 using DWPodcastFeed.Models;
-using DWPodcastFeed.Models.DailyWireApi;
 using GraphQL;
 using GraphQL.Client.Abstractions;
 using GraphQL.Client.Http;
