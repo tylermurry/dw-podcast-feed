@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "deploy": "az containerapp up --name ca-dwpodcastfeed --resource-group rg-dwpodcastfeed --logs-workspace-id workspace-rgdwpodcastfeedEWna --location centralus --target-port 80 --ingress external --source ./DWPodcastFeed"
+  }
+}
