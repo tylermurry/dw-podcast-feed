@@ -10,16 +10,19 @@ public class PodcastFeedService(DailyWireApiService dailyWireApiService)
     {
         var podcastSeasonIdMap = new Dictionary<string, string>
         {
-            {"matt-walsh", "clqxyxgj258dp0806ub9ot7ah" }
+            {"matt-walsh", "clqxyxgj258dp0806ub9ot7ah" },
+            {"ben-shapiro", "clqxywzkani9e08705ygwudi6" },
+            {"michael-knowles", "clqxywj98dn3t0898qjtw1qvy" },
+            {"andrew-klavan", "clqy95swn9l6f08068d6qrw7m" },
         };
         
         var podcastEpisodes = await dailyWireApiService.GetPodcastEpisodes(podcastSeasonIdMap[podcastId], accessToken);
-        var podcastXmlDocument = await BuildPodcastFeedXml(feedUrl, podcastEpisodes);
+        var podcastXmlDocument = BuildPodcastFeedXml(feedUrl, podcastEpisodes);
 
         return await GetStreamFromDocument(podcastXmlDocument, cancellationToken);
     }
 
-    private async Task<XDocument> BuildPodcastFeedXml(string feedUrl, List<PodcastEpisode> podcastEpisodes)
+    private XDocument BuildPodcastFeedXml(string feedUrl, List<PodcastEpisode> podcastEpisodes)
     {
         XNamespace itunes = "http://www.itunes.com/dtds/podcast-1.0.dtd";
         XNamespace googlePlay = "http://www.google.com/schemas/play-podcasts/1.0";

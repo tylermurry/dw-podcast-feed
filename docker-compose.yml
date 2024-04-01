@@ -1,0 +1,6 @@
+services:
+  dwpodcastfeed:
+    image: dwpodcastfeed
+    build:
+      context: .
+      dockerfile: Dockerfile

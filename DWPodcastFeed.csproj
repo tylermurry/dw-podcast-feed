@@ -11,14 +11,6 @@
     
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-    
-    
-
-    <ItemGroup>
         <PackageReference Include="Auth0.AuthenticationApi" Version="7.26.1" />
         <PackageReference Include="Microsoft.Playwright" Version="1.42.0" />
         <PackageReference Include="Flurl.Http" Version="3.2.4" />

@@ -12,6 +12,7 @@ builder.Services.AddSingleton<PodcastFeedService>();
 var app = builder.Build();
 
 
+app.MapGet("/", () => "Hi");
 
 app.MapGet("/podcasts/{podcastId}/feed", async Task<IResult> (
     [FromRoute] string podcastId, 

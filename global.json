@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "deploy": "az containerapp up --name ca-dwpodcastfeed --resource-group rg-dwpodcastfeed --logs-workspace-id workspace-rgdwpodcastfeedEWna --location centralus --target-port 80 --ingress external --source ./DWPodcastFeed"
+//    "deploy": "az containerapp up --name ca-dwpodcastfeed --resource-group rg-dwpodcastfeed --logs-workspace-id workspace-rgdwpodcastfeedEWna --location centralus --target-port 80 --ingress external --source ./DWPodcastFeed"
+    "deploy": "az containerapp up -n ca-dwpodcastfeed --resource-group rg-dwpodcastfeed --source ./ --location centralus --logs-workspace-id ed65dcfe-043f-4657-bdf0-fd23f886619f --registry-server icdregistry.azurecr.io"
   }
 }
